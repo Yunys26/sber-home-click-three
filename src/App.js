@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Canvas } from 'react-three-fiber';
+import { Box } from '@react-three/drei';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+
+  <React.Fragment>
+    {/* Создаем холст для взаимодействия */}
+    <Canvas>
+      {/* <mesh>
+        <boxBufferGeometry attach="geometry" args={[2,2,2]} />
+        <meshStandardMaterial attach="material"/>
+      </mesh> */}
+      <Box>
+        <meshStandardMaterial attach="material"/>
+      </Box>
+    </Canvas>
+  </React.Fragment>
+
+) 
 
 export default App;
