@@ -3,6 +3,8 @@ import { Canvas, useFrame } from 'react-three-fiber';
 import { Box, OrbitControls, Sky } from '@react-three/drei'
 import './App.css';
 import BigRoom from './components/BigRoom';
+import Balcony from './components/Balcony';
+import Bedroom from './components/Bedroom';
 
 // const SpinningMesh = ({ position, args, color }) => {
 //   // Создаем ref чтобы получить ссылку на сетку
@@ -70,9 +72,11 @@ const App = () => {
         shadowMap
         colorManagement
       >
+        {/* <group> */}
+        <Balcony />
         <BigRoom />
-
-
+        <Bedroom />
+        {/* </group> */}
         <OrbitControls />
       </Canvas>
     </React.Fragment>
